@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+:root{
+   /*cores*/
+   --textColor: #9b9b9b;
+   --bgColor: #ecf3f8;
+   --darkColor: #112233;
+   --darkShadow: #d4dbe7;
+   --lightShadow: #fdfefe;
+   /*cores: fim*/
+   /*medidas*/
+   --margin: 100px;
+   --aspect-width: 4;
+   --aspect-height: 3;
+/* Calculate c*/
+   --constant: calc(var(--margin) * var(--aspect-width)) / (var(--aspect-height) * 3);
+   /*medidas: fim*/
+}
+
+*{
+    margin: 0; padding: 0;
+    font-family: "Comfortaa", sans-serif;
+    color: var(--textColor);
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('bg-room.png' ); /*local da iamgem*/
+    background-position: center center; /*centralizando a imagem verticalmente e horizontalmente*/
+    background-repeat: no-repeat; /*imagem nao repetir*/
+    background-attachment: fixed; /*fixar a imagem ao viewport, para n'ao mover quando a altura do conteudo e maior que a altura da imagem*/
+    background-size: cover; /*a magica, essa propriedade faz o background reescalavel baseado no tamanho do conteudo*/
+    background-color: var(--bgColor);/*cor de fundo*/
+}
+
+.container{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.container .wrapper{
+    margin-top: auto;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  
+}
+.container .wrapper .papa-wrapper{   
+    width: max-content;
+    height: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 275px;
+}
+.container .wrapper .papa-wrapper:hover{
+    animation: foge 15s ease-in-out infinite;
+    }
+    
+    @keyframes foge{
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(0.40);
+        }
+        100%{
+            transform: scale(1);
+    
+        }
+    }
+.container .wrapper .papa-wrapper:hover .papapanda{
+    animation: none;
+}
+.container .wrapper .papa-wrapper:hover .papapanda, .sombra{
+    animation: none;
+}
+
+.container .wrapper .papa-wrapper .papapanda {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25vh;
+    height: 25vh;
+    animation: floating 21s ease-in-out infinite;
+}
+@keyframes floating {
+    0% {
+    transform: translate3d(0, 0, 0);
+    }
+    40% {
+    transform: translate3d(0, -40%, 0);
+    }
+    47% {
+    transform: translate3d(0, -40%, 0);
+    }
+    93% {
+        transform: translate3d(0, 0, 0);
+        }
+    100% {
+    transform: translate3d(0, 0, 0);
+    }
+}
+
+
+.container .wrapper .papa-wrapper .sombra {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25vh;
+    height: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    animation: floatingShadow 21s ease-in-out infinite;
+    z-index: -1;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+@keyframes floatingShadow {
+    0% {
+    transform: scale(.93);
+    }
+    40% {
+    transform: scale(0.6);
+    }
+    47% {
+    transform: scale(0.6);
+    }
+    93% {
+        transform: scale(0.93);
+        }
+    100% {
+    transform: scale(0.93);
+    }
+}
+
+.container .wrapper .form-wrapper{
+    width: max-content;
+    height: max-content;
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container .wrapper .form-wrapper h1 {
+    font-size: 3em;
+    transition: 0.5s;
+    transform: translateY(100px);
+    opacity: 0.5;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+.container .wrapper .form-wrapper h1:hover {
+    transform: translateY(30px);
+    opacity: 1;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    color: var(--darkColor);
+}
+.container .wrapper .form-wrapper p {
+    transition: 0.5s;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    color: var(--darkColor);
+
+}
+.container .wrapper .form-wrapper p:hover {
+    transform: translateY(30px);
+    opacity: 1;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.container .wrapper .form-wrapper .form-center {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .container .wrapper .form-wrapper .form-center form .form-input {
+    position: relative;
+    background: var(--bgColor);
+    box-shadow:  10px 10px 20px var(--darkShadow),
+                -4px -4px 12px var(--bgColor), 
+                -10px -10px 20px var(--lightShadow);
+    border: none;
+    width: 500px;
+    height: 65px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 25px;
+    bottom: 0;
+  }
+  
+  .container .wrapper .form-wrapper .form-center form input{
+    outline: none;
+    width: 100%;
+    padding: 20px 15px;
+    background: transparent;
+    border: none;
+    color: var(--textColor);
+  }
+  
+  .container .wrapper .form-wrapper .form-center .b-logo, .container .wrapper .form-wrapper .form-center .c-logo {
+    width: 27px
+  }  
+  .container .wrapper .form-wrapper .form-center .c-logo {
+    width: 22px
+  }
+  
+@media (max-width: 500px) {
+    
+    .container .wrapper .form-wrapper .form-center form .form-input {
+        height: auto;
+        border-radius: 40px;
+        width: auto;
+    }
+    .container .wrapper .papa-wrapper .papapanda {
+        margin-top: 275px;
+    }
+}
+@media (max-height: 700px) {
+    
+    @keyframes floating {
+        0% {
+        transform: translate3d(0, 0, 0);
+        }
+        40% {
+        transform: translate3d(0, -27%, 0);
+        }
+        47% {
+        transform: translate3d(0, -27%, 0);
+        }
+        93% {
+            transform: translate3d(0, 0, 0);
+            }
+        100% {
+        transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
