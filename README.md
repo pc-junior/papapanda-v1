@@ -6,7 +6,7 @@ Este rascunho derteminará as minhas possibilidades para desenvolver o site real
 
 ### Papapanda
 Papapanda é um conceito de um website pessoal onepage.
-A proposta é que recursos de automatização o website se torne um assistente pessoal para seu proprietário.
+A proposta é que recursos de automatização se tornem o webiste em um assistente pessoal para seu proprietário.
 A idéia é simples:
   - A página se torna uma tela (onde "qualquer" componente poderá ser projetado)
   - O componentes principais da tela são:
