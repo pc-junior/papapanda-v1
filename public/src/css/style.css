@@ -25,7 +25,7 @@
 }
 
 body{
-    background-image: url('src/img/bg-room.png' ); /*local da iamgem*/
+    background-image: url('/src/img/bg-room.png'); /*local da iamgem*/
     background-position: center center; /*centralizando a imagem verticalmente e horizontalmente*/
     background-repeat: no-repeat; /*imagem nao repetir*/
     background-attachment: fixed; /*fixar a imagem ao viewport, para n'ao mover quando a altura do conteudo e maior que a altura da imagem*/
